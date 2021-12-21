@@ -128,7 +128,7 @@ img.add_border {
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li><a href='About.html'>About</a><li class='has-children'><a href='EXAM.html'>EXAM</a><ul class='dropdown'><li><a href='W13.html'>W13</a></li></ul><li><a href='HW1.html'>HW1</a><li><a href='HW2.html'>HW2</a><li><a href='HW3.html'>HW3</a><li class='has-children'><a href='Final Project.html'>Final Project</a><ul class='dropdown'><li><a href='run.html'>run</a></li>
+                     <li><a href='About.html'>About</a><li class='has-children'><a href='EXAM.html'>EXAM</a><ul class='dropdown'><li><a href='w13.html'>w13</a></li></ul><li><a href='HW1.html'>HW1</a><li><a href='HW2.html'>HW2</a><li><a href='HW3.html'>HW3</a><li class='has-children'><a href='Final Project.html'>Final Project</a><ul class='dropdown'><li><a href='run.html'>run</a></li>
                       </ul>
                 </nav>
               </div>
@@ -139,7 +139,7 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">EXAM << <a href='EXAM.html'>Previous</a> <a href='HW1.html'>Next</a> >> HW1<br /><h1>W13</h1>
+    <div id="tipue_search_content">EXAM << <a href='EXAM.html'>Previous</a> <a href='HW1.html'>Next</a> >> HW1<br /><h1>w13</h1>
 <script src="./../cmsimde/static/brython.js"></script>
 <script src="./../cmsimde/static/brython_stdlib.js"></script>
 <!-- for ggame -->
@@ -230,7 +230,7 @@ doc['clear_bd'].bind('click', clear_bd)
 <div style="width: 100%; height: 100%;"><textarea autocomplete="off" id="kw_console"></textarea></div>
 <div id="brython_div"></div>
 <div class="col-md-0" height="1" id="graphics-column" width="1"></div>
-<p><!-- ****************************** keyword start -->
+<p><!-- **************************** keyword start -->
 <script type="text/python3">
 from browser import document as doc
 # 導入位於 static 目錄下的 beditor.py 
@@ -249,6 +249,7 @@ print("Python keywords: ", keyword.kwlist)
 doc["keyword"].bind('click', kw1.prog)
 </script>
 </p>
+<p></p>
 <script type="text/python3">
 import beditor
 from browser import document
@@ -257,7 +258,15 @@ src = open(url).read()
 w13 = beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
 document["w13"].bind("click", w13.prog)
 </script>
-<p><button id="keyword">Keyword</button><button id="w13">列出 10 個座標</button></p><br />EXAM << <a href='EXAM.html'>Previous</a> <a href='HW1.html'>Next</a> >> HW1</div>
+<script type="text/python3">
+import beditor
+from browser import document
+url = "https://gist.githubusercontent.com/Xiang41023113/e4d226720ea5aaf6ee09f5002891fa00/raw/9b6d62e6537ede8221b78882a143186c35f189a0/W13-2"
+src = open(url).read()
+w13_1 = beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
+document["w13_1"].bind("click", w13_1.prog)
+</script>
+<p><button id="keyword">Keyword</button><button id="w13">列出 10 個座標</button><button id="w13_1">畫出表格</button></p><br />EXAM << <a href='EXAM.html'>Previous</a> <a href='HW1.html'>Next</a> >> HW1</div>
         
     <!-- footer -->
       <div class="container">
